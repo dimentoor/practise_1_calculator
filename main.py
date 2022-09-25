@@ -21,8 +21,25 @@ def main():
             break
         # Если action равен +, -, *, /, то
         if action in ('+', '-', '*', '/'):
-            pass
+            # add +; -
+            x = float(input("x = "))
 
+            y = float(input("y = "))
+
+            if action == '+':
+                print('%.2f + %.2f = %.2f' % (x, y, x + y))
+
+            elif action == '-':
+                print('%.2f - %.2f = %.2f' % (x, y, x - y))
+                # add *; /
+            elif action == '*':
+                print('%.2f * %.2f = %.2f' % (x, y, x * y))
+
+            elif action == '/':
+                if y != 0:
+                    print('%.2f / %.2f = %.2f' % (x, y, x / y))
+                else:
+                    print("Деление на ноль!")
         else:
             print("thx for using calculator")
 
